@@ -1,6 +1,15 @@
 import React from "react";
 
 function UserCard(props) {
+
+  const passTheButtonData = () => {
+    (props.handleUserChange(props.id));
+    console.log(props.handleUserChange)
+  }
+
+  console.log(props.handleUserChange);
+
+
   return (
     <div className="card">
       <div className="content">
@@ -13,7 +22,7 @@ function UserCard(props) {
         <div className="description">{props.description}</div>
       </div>
       <div
-        onClick={() => props.handleUserClick(props.id)}
+        onClick={passTheButtonData}
         className="ui bottom attached button"
       >
         <i className="add icon"></i>
